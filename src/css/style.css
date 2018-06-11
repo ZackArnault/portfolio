@@ -1,19 +1,41 @@
 * {
   box-sizing: border-box; }
 
-body {
-  background: #aaa; }
+li {
+  list-style-type: none; }
 
 .container {
   display: grid;
+  grid-template-rows: 10vh 90vh auto;
   grid-template-areas: "nav" "header" "about" "work" "contact" "footer"; }
 
 .navigation {
   grid-area: nav;
-  background: #1a1a1a; }
+  background: #0d0d0d;
+  color: #CCC;
+  border-bottom: 0.25rem solid #CCCCCC; }
+  .navigation ul {
+    display: none; }
 
 .header {
-  grid-area: header; }
+  grid-area: header;
+  background: #1a1a1a;
+  color: #CCC;
+  /* background-image: url('../images/city.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-filter: grayscale(100%); !* Safari 6.0 - 9.0 *!
+  filter: grayscale(100%);*/ }
+  .header .header__social-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0; }
 
 .about {
   grid-area: about; }

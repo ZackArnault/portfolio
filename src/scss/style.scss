@@ -5,12 +5,13 @@
   box-sizing: border-box;
 }
 
-body {
-  background: $body-bg;
+li {
+  list-style-type: none;
 }
 
 .container {
   display: grid;
+  grid-template-rows: 10vh 90vh auto;
   grid-template-areas:
     "nav"
     "header"
@@ -22,11 +23,36 @@ body {
 
 .navigation {
   grid-area: nav;
-  background: $main-dark;
+  background: darken($main-dark, 5);
+  color: set-text-color($main-dark);
+  border-bottom: 0.25rem solid $main-light;
+
+  ul {
+    display: none;
+  }
 }
 
 .header {
   grid-area: header;
+  background: $main-dark;
+  color: set-text-color($main-dark);
+ /* background-image: url('../images/city.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-filter: grayscale(100%); !* Safari 6.0 - 9.0 *!
+  filter: grayscale(100%);*/
+
+  .header__social-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+  }
 }
 
 .about {
