@@ -2,7 +2,7 @@
 
 // Functions
 @function set-text-color($color){
-  @if(lightness($color) > 10){
+  @if(lightness($color) > 50){
     @return $text-color-dark;
   } @else {
     @return $text-color-light;

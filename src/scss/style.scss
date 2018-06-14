@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: $main-font;
+}
+
+p {
+  font-family: $secondary-font;
+}
+
 li {
   list-style-type: none;
 }
@@ -23,9 +31,18 @@ li {
 
 .navigation {
   grid-area: nav;
-  background: darken($main-dark, 5);
-  color: set-text-color($main-dark);
-  border-bottom: 0.25rem solid $main-light;
+  background: $main-light;
+  color: darken($main-light, 20);
+  border-bottom: 0.25rem solid darken($main-light, 20);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  .navigation__toggle {
+    font-size: 2.5em;
+    padding: 1rem;
+  }
 
   ul {
     display: none;
@@ -33,6 +50,7 @@ li {
 }
 
 .header {
+  display: flex;
   grid-area: header;
   background: $main-dark;
   color: set-text-color($main-dark);
@@ -46,12 +64,32 @@ li {
   -webkit-filter: grayscale(100%); !* Safari 6.0 - 9.0 *!
   filter: grayscale(100%);*/
 
+  .header__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    p {
+      font-family: $main-font;
+      font-size: 1.25em;
+      margin: 0;
+    }
+  }
+
   .header__social-menu {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 0;
+    font-size: 2em;
+
+    li a {
+      font-size: 1.25em;
+      padding: 1rem;
+      color: lighten($main-light, 15);
+    }
   }
 }
 
@@ -77,7 +115,7 @@ li {
   width: 0;
   top: 0;
   left: 50%;
-  background: rgba(0, 0, 0, 0.8);
+  background: $main-light;
   z-index: 2;
   opacity: 0;
   visibility: hidden;
@@ -90,7 +128,7 @@ li {
 
 }
 .open {
-  opacity: 1;
+  opacity: 0.95;
   visibility: visible;
   width: 100%;
   -webkit-transition: width 0.5s;
@@ -142,11 +180,12 @@ li {
       flex: 1;
       line-height: 20vh;
       a {
+        font-family: $main-font;
         font-size: 1.5em;
         transition: all 0.5s ease;
         display: block;
         text-decoration: none;
-        color: rgba(255, 255, 255, .5);
+        color: set-text-color($main-light);
         &:hover {
           color: rgba(255, 255, 255, .9);
           transform: scale(1.1);
