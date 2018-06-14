@@ -3,19 +3,14 @@
 // Variables
 $breakpoint: 800px;
 
+$primary-color: #292929;
+$accent-color: #393f61;
+$secondary-dark: #72728b;
+$secondary-medium: #b8baca;
+$secondary-light: #edeee8;
+
 $main-font: 'Cabin', sans-serif;
 $secondary-font: 'Raleway', sans-serif;
 
-$body-bg: #aaa;
-
-$main-dark: #040404;
-$main-light: #688E95;
-
-$color1: #131719;
-$color2: #46494f;
-$color3: #9da5ab;
-$color4: #a9bbc2;
-$color5: #e1f2f5;
-
-$text-color-light: lighten($main-light, 40);
-$text-color-dark: $main-dark;
+$text-color-light: $secondary-light;
+$text-color-dark: $primary-color;

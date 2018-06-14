@@ -31,9 +31,9 @@ li {
 
 .navigation {
   grid-area: nav;
-  background: $main-light;
-  color: darken($main-light, 20);
-  border-bottom: 0.25rem solid darken($main-light, 20);
+  background: $accent-color;
+  color: set-text-color($accent-color);
+  border-bottom: 0.25rem solid $secondary-medium;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -52,17 +52,8 @@ li {
 .header {
   display: flex;
   grid-area: header;
-  background: $main-dark;
-  color: set-text-color($main-dark);
- /* background-image: url('../images/city.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-filter: grayscale(100%); !* Safari 6.0 - 9.0 *!
-  filter: grayscale(100%);*/
+  background: $primary-color;
+  color: set-text-color($primary-color);
 
   .header__intro {
     display: flex;
@@ -88,7 +79,7 @@ li {
     li a {
       font-size: 1.25em;
       padding: 1rem;
-      color: lighten($main-light, 15);
+      color: $secondary-dark;
     }
   }
 }
@@ -115,7 +106,7 @@ li {
   width: 0;
   top: 0;
   left: 50%;
-  background: $main-light;
+  background: $accent-color;
   z-index: 2;
   opacity: 0;
   visibility: hidden;
@@ -139,7 +130,7 @@ li {
   position: fixed;
   top: 40px;
   right: 60px;
-  color: white;
+  color: set-text-color($secondary-dark);
   z-index: 3;
   cursor: pointer;
   font-family: sans-serif;
@@ -185,7 +176,7 @@ li {
         transition: all 0.5s ease;
         display: block;
         text-decoration: none;
-        color: set-text-color($main-light);
+        color: set-text-color($secondary-dark);
         &:hover {
           color: rgba(255, 255, 255, .9);
           transform: scale(1.1);

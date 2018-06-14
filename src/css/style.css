@@ -19,9 +19,9 @@ li {
 
 .navigation {
   grid-area: nav;
-  background: #688E95;
-  color: #3e5559;
-  border-bottom: 0.25rem solid #3e5559;
+  background: #393f61;
+  color: #edeee8;
+  border-bottom: 0.25rem solid #b8baca;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -35,17 +35,8 @@ li {
 .header {
   display: flex;
   grid-area: header;
-  background: #040404;
-  color: #e0e8e9;
-  /* background-image: url('../images/city.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-filter: grayscale(100%); !* Safari 6.0 - 9.0 *!
-  filter: grayscale(100%);*/ }
+  background: #292929;
+  color: #edeee8; }
   .header .header__intro {
     display: flex;
     flex-direction: column;
@@ -65,7 +56,7 @@ li {
     .header .header__social-menu li a {
       font-size: 1.25em;
       padding: 1rem;
-      color: #95b0b5; }
+      color: #72728b; }
 
 .about {
   grid-area: about; }
@@ -85,7 +76,7 @@ li {
   width: 0;
   top: 0;
   left: 50%;
-  background: #688E95;
+  background: #393f61;
   z-index: 2;
   opacity: 0;
   visibility: hidden;
@@ -107,7 +98,7 @@ li {
   position: fixed;
   top: 40px;
   right: 60px;
-  color: white;
+  color: #edeee8;
   z-index: 3;
   cursor: pointer;
   font-family: sans-serif; }
@@ -148,7 +139,7 @@ li {
         transition: all 0.5s ease;
         display: block;
         text-decoration: none;
-        color: #e0e8e9; }
+        color: #edeee8; }
         .overlay__nav ul li a:hover {
           color: rgba(255, 255, 255, 0.9);
           transform: scale(1.1); }
