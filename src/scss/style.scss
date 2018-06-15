@@ -9,6 +9,11 @@ h1, h2, h3, h4, h5 {
   font-family: $main-font;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
 p {
   font-family: $secondary-font;
 }
@@ -69,15 +74,24 @@ li {
     }
   }
 
+  .header__view-button {
+    padding: 0.75rem 1.5rem;
+    background: $accent-color;
+    font-family: $secondary-font;
+    color: set-text-color($accent-color);
+    border: none;
+  }
+
   .header__social-menu {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding: 0;
+    margin: 2rem;
     font-size: 2em;
 
     li a {
-      font-size: 1.25em;
+      font-size: 1em;
       padding: 1rem;
       color: $secondary-dark;
     }
@@ -209,6 +223,55 @@ li {
   width: 85px;
   height: 85px;
   cursor: pointer;
+}
+
+.about {
+  text-align: center;
+  padding: 2rem;
+
+  .about__avatar {
+    width: 10rem;
+    border-radius: 50%;
+  }
+}
+
+.contact {
+  background: $accent-color;
+  padding: 2rem;
+  color: set-text-color($accent-color);
+
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .contact__input {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    background: $primary-color;
+    font-family: $secondary-font;
+  }
+
+  .contact__submit {
+    padding: 0.75rem 1.5rem;
+    background: $accent-color;
+    font-family: $secondary-font;
+    color: set-text-color($accent-color);
+    border: 1px solid $secondary-light;
+    flex-basis: 20%;
+  }
+}
+
+.footer {
+  background: $primary-color;
+  padding: 2.5rem;
+  color: set-text-color($accent-color);
+  text-align: center;
+  font-family: $secondary-font;
 }
 
 /* Desktop Styles */
